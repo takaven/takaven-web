@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/teamframe/",
+      "statusCode": 307
+    }
+  ]
+}
