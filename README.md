@@ -2,7 +2,7 @@
 
 **Canonical website source:** [`takaven/takaven-web`](https://github.com/takaven/takaven-web), branch `main`. **Not** the TeamFrame HR application source.
 
-The current published deployment is the Vercel project `takaven-web` in the **Takaven** Vercel team under `admin@takaven.com` (project ID `prj_d0VTmOdVmnB6Di3S99fjPea7V5mz`). The TeamFrame public site is intended for `https://www.takaven.com/teamframe/`, served from the `teamframe/` directory. The Vercel-generated deployment URL `https://takaven-web-gamma.vercel.app/teamframe/` was checked in Chrome on 13 October 2026. **The custom-domain/DNS verification was still pending at this checkpoint**; do not equate a successful Vercel deploy with the custom domain being live.
+The current published deployment is the Vercel project `takaven-web` in the **Takaven** Vercel team under `admin@takaven.com` (project ID `prj_d0VTmOdVmnB6Di3S99fjPea7V5mz`). The TeamFrame public site is live at `https://www.takaven.com/teamframe/`, served from the `teamframe/` directory. Production is Git-connected to this repository's `main`; publication was verified at commit `56f9184b04caf5a816718a8f1318b8fbfbf99d62` on 13 October 2026, including the root redirect, HTTPS, privacy page, navigation and HR Setup Check.
 
 The **product application** is `takaven/teamframe`, served separately from `https://app.takaven.com` on Vercel `teamframe-production`. Its code, authentication, Supabase, deployment and customer-data approval gates are distinct from this static marketing site. Do not connect this repository to the product application's Vercel project.
 
@@ -24,14 +24,17 @@ The controlling current product and commercial scope is in [`takaven/teamframe/T
 
 Two customer starting points: TeamFrame tool/implementation, or TeamFrame + HR Foundation Setup, with optional TeamFrame HR Support separately scoped. The software is sold as a one-off purchase and the customer controls/pays for infrastructure. **No public price figure is displayed in this website release.** Historical price figures in the predecessor repository and portfolio need commercial validation before being republished; this source-consolidation does not change prices or contract terms.
 
-The predecessor `takaven/teamframe-site` used to be documented as canonical. It is superseded **for current website code** by this repository once this reconciliation is merged. Retain it read-only until the website, product and portfolio references are reconciled and its removal is separately confirmed. Never delete the product application repository `takaven/teamframe`.
+The predecessor `takaven/teamframe-site` used to be documented as canonical. The website, application and portfolio source references were reconciled, and the founder subsequently deleted that predecessor repository. Its reviewed history is summarised in [`docs/LEGACY-CONSOLIDATION.md`](docs/LEGACY-CONSOLIDATION.md); it is not an active or recoverable source. Never confuse it with or delete the product application repository `takaven/teamframe`.
 
-## Launch checkpoint (2026-10-13)
+## Publication checkpoint (verified 2026-10-13; reconciled 2026-10-14)
 
-- Vercel-generated deployment: reported **Ready**, pages and HR Setup Check checked in Chrome.
-- Custom `www.takaven.com` mapping: **verification/DNS cutover pending**. The old `www` record points to the apex; avoid changing DNS from source code or assuming the root website is disposable.
+- Production source: `takaven/takaven-web` `main` at `56f9184b04caf5a816718a8f1318b8fbfbf99d62`; Vercel deployment reported successful.
+- Public routes: `https://www.takaven.com/` redirects with HTTP 307 to `/teamframe/`; `/teamframe/` and `/teamframe/privacy.html` return successfully.
+- Custom domain: authoritative GoDaddy DNS and public resolvers return `www.takaven.com CNAME 10074f97bb5aebf8.vercel-dns-017.com`; the Vercel ownership TXT record and HTTPS certificate are active.
+- Browser verification: navigation, product-area interaction and the complete seven-question HR Setup Check passed; required images and scripts loaded without page console errors.
 - `Component.FORM_ENDPOINT`: `null`; online form submission is deliberately inactive. **Direct email alternative:** `admin@takaven.com`. Do not claim submitted enquiries are delivered via the form until a real provider and end-to-end receipt test exist.
 - Privacy notice: `/teamframe/privacy.html`.
+- Predecessor repository: `takaven/teamframe-site` was deleted by the founder after reconciliation completed.
 - No pricing, production-application release, real-customer data, or GoDaddy DNS changes are authorised by documentation updates alone.
 
 Review [operations](docs/WEBSITE-OPERATIONS.md) before deployment or domain changes.
