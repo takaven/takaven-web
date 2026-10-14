@@ -2,7 +2,7 @@
 
 **Canonical website source:** [`takaven/takaven-web`](https://github.com/takaven/takaven-web), branch `main`. **Not** the TeamFrame HR application source.
 
-The current published deployment is the Vercel project `takaven-web` in the **Takaven** Vercel team under `admin@takaven.com` (project ID `prj_d0VTmOdVmnB6Di3S99fjPea7V5mz`). The TeamFrame public site is live at `https://www.takaven.com/teamframe/`, served from the `teamframe/` directory. Production is Git-connected to this repository's `main`; publication was verified at commit `56f9184b04caf5a816718a8f1318b8fbfbf99d62` on 13 October 2026, including the root redirect, HTTPS, privacy page, navigation and HR Setup Check.
+The current published deployment is the Vercel project `takaven-web` in the **Takaven** Vercel team under `admin@takaven.com` (project ID `prj_d0VTmOdVmnB6Di3S99fjPea7V5mz`). The TeamFrame public site is live at `https://www.takaven.com/teamframe/`, served from the `teamframe/` directory. Production is Git-connected to this repository's `main`. The current verified Production deployment is `main` at `69b9e16685bf21e66db89d1636f6636ad7952583` (documentation reconciliation only); the last behaviour-changing publication baseline is `56f9184b04caf5a816718a8f1318b8fbfbf99d62`, verified on 13 October 2026 for the root redirect, HTTPS, privacy page, navigation and HR Setup Check.
 
 The **product application** is `takaven/teamframe`, served separately from `https://app.takaven.com` on Vercel `teamframe-production`. Its code, authentication, Supabase, deployment and customer-data approval gates are distinct from this static marketing site. Do not connect this repository to the product application's Vercel project.
 
@@ -13,6 +13,7 @@ The **product application** is `takaven/teamframe`, served separately from `http
 - `teamframe/support.js`: the existing page runtime; do not replace it merely to make the documentation cleaner.
 - `teamframe/uploads/`: local marketing images and logos.
 - [`docs/WEBSITE-OPERATIONS.md`](docs/WEBSITE-OPERATIONS.md): hosting, configuration, verification and ownership.
+- [`docs/AUDIT-HANDOFF.md`](docs/AUDIT-HANDOFF.md): independent-review entry point and evidence map; navigation only, not a competing source of truth.
 - [`docs/LEGACY-CONSOLIDATION.md`](docs/LEGACY-CONSOLIDATION.md): reviewed predecessor website and what was retained or intentionally not copied.
 - [`AGENTS.md`](AGENTS.md): short source-control and documentation discipline.
 
@@ -28,9 +29,9 @@ The predecessor `takaven/teamframe-site` used to be documented as canonical. The
 
 ## Publication checkpoint (verified 2026-10-13; reconciled 2026-10-14)
 
-- Production source: `takaven/takaven-web` `main` at `56f9184b04caf5a816718a8f1318b8fbfbf99d62`; Vercel deployment reported successful.
+- Production source: `takaven/takaven-web` `main`; verified Production deployment at documentation checkpoint `69b9e16685bf21e66db89d1636f6636ad7952583`, with behaviour-changing website baseline `56f9184b04caf5a816718a8f1318b8fbfbf99d62`.
 - Public routes: `https://www.takaven.com/` redirects with HTTP 307 to `/teamframe/`; `/teamframe/` and `/teamframe/privacy.html` return successfully.
-- Custom domain: authoritative GoDaddy DNS and public resolvers return `www.takaven.com CNAME 10074f97bb5aebf8.vercel-dns-017.com`; the Vercel ownership TXT record and HTTPS certificate are active.
+- Custom domain: Vercel reports `www.takaven.com` verified; authoritative GoDaddy DNS/public resolver verification recorded `www.takaven.com CNAME 10074f97bb5aebf8.vercel-dns-017.com`, with the Vercel ownership TXT record and HTTPS active. The bare apex `takaven.com` is intentionally not attached to this Vercel project and remains outside the TeamFrame marketing deployment.
 - Browser verification: navigation, product-area interaction and the complete seven-question HR Setup Check passed; required images and scripts loaded without page console errors.
 - `Component.FORM_ENDPOINT`: `null`; online form submission is deliberately inactive. **Direct email alternative:** `admin@takaven.com`. Do not claim submitted enquiries are delivered via the form until a real provider and end-to-end receipt test exist.
 - Privacy notice: `/teamframe/privacy.html`.
