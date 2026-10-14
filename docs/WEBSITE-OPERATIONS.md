@@ -20,7 +20,7 @@ Do not transfer product source, customer records, credentials, or deployment set
 - Vercel project: `takaven-web` (`prj_d0VTmOdVmnB6Di3S99fjPea7V5mz`).
 - Git source: `takaven/takaven-web`, `main`.
 - Folder: `teamframe/`; `vercel.json` redirects the marketing root `/` to `/teamframe/` with HTTP 307 rather than serving a separate company homepage.
-- Current Production deployment checkpoint: `main` commit `69b9e16685bf21e66db89d1636f6636ad7952583`, Vercel state `READY` (documentation-only reconciliation). Last behaviour-changing website baseline: `56f9184b04caf5a816718a8f1318b8fbfbf99d62`.
+- Production deployment was re-verified `READY` on 2026-10-14 after documentation reconciliation. Last behaviour-changing website baseline: `56f9184b04caf5a816718a8f1318b8fbfbf99d62`. Because documentation-only merges also deploy, use live GitHub/Vercel state for the latest `main` SHA rather than treating a docs SHA as permanent.
 - Live public routes: `https://www.takaven.com/teamframe/` and `https://www.takaven.com/teamframe/privacy.html`; `https://www.takaven.com/` redirects to `/teamframe/`.
 - Domain checkpoint: Vercel reports `www.takaven.com` verified. Authoritative GoDaddy nameservers, Google DNS, Cloudflare DNS and the local resolver returned `www.takaven.com CNAME 10074f97bb5aebf8.vercel-dns-017.com` on 2026-10-13. The `_vercel.takaven.com` ownership TXT record and a valid HTTPS certificate for `www.takaven.com` were present.
 - Apex boundary: `takaven.com` is not attached to `takaven-web`; it remains on the separate GoDaddy apex configuration. An auditor must evaluate the TeamFrame marketing site at `www.takaven.com`, not assume apex and `www` are the same deployment.

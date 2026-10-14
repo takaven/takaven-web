@@ -20,7 +20,7 @@ Do not infer application readiness, customer-data authority or legal/compliance 
 ## Website evidence checkpoint
 
 - GitHub repository: `takaven/takaven-web`, protected/current branch `main`.
-- Current verified Vercel Production deployment at preparation time: `69b9e16685bf21e66db89d1636f6636ad7952583`, state `READY`.
+- Vercel Production was re-verified `READY` on 2026-10-14 after documentation reconciliation. Read the live repository/Vercel deployment for the current docs-only SHA.
 - Last behaviour-changing website baseline: `56f9184b04caf5a816718a8f1318b8fbfbf99d62` (root redirect to `/teamframe/`).
 - Vercel project: `takaven-web`, ID `prj_d0VTmOdVmnB6Di3S99fjPea7V5mz`, Takaven team under `admin@takaven.com`.
 - Canonical public URL: `https://www.takaven.com/teamframe/`.

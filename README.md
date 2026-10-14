@@ -2,7 +2,7 @@
 
 **Canonical website source:** [`takaven/takaven-web`](https://github.com/takaven/takaven-web), branch `main`. **Not** the TeamFrame HR application source.
 
-The current published deployment is the Vercel project `takaven-web` in the **Takaven** Vercel team under `admin@takaven.com` (project ID `prj_d0VTmOdVmnB6Di3S99fjPea7V5mz`). The TeamFrame public site is live at `https://www.takaven.com/teamframe/`, served from the `teamframe/` directory. Production is Git-connected to this repository's `main`. The current verified Production deployment is `main` at `69b9e16685bf21e66db89d1636f6636ad7952583` (documentation reconciliation only); the last behaviour-changing publication baseline is `56f9184b04caf5a816718a8f1318b8fbfbf99d62`, verified on 13 October 2026 for the root redirect, HTTPS, privacy page, navigation and HR Setup Check.
+The current published deployment is the Vercel project `takaven-web` in the **Takaven** Vercel team under `admin@takaven.com` (project ID `prj_d0VTmOdVmnB6Di3S99fjPea7V5mz`). The TeamFrame public site is live at `https://www.takaven.com/teamframe/`, served from the `teamframe/` directory. Production is Git-connected to this repository's `main`. Vercel Production was re-verified `READY` on 14 October 2026 after documentation reconciliation. The last behaviour-changing publication baseline is `56f9184b04caf5a816718a8f1318b8fbfbf99d62`, verified for the root redirect, HTTPS, privacy page, navigation and HR Setup Check. Read the live `main` head rather than treating a documentation-only SHA as permanent state.
 
 The **product application** is `takaven/teamframe`, served separately from `https://app.takaven.com` on Vercel `teamframe-production`. Its code, authentication, Supabase, deployment and customer-data approval gates are distinct from this static marketing site. Do not connect this repository to the product application's Vercel project.
 
@@ -29,7 +29,7 @@ The predecessor `takaven/teamframe-site` used to be documented as canonical. The
 
 ## Publication checkpoint (verified 2026-10-13; reconciled 2026-10-14)
 
-- Production source: `takaven/takaven-web` `main`; verified Production deployment at documentation checkpoint `69b9e16685bf21e66db89d1636f6636ad7952583`, with behaviour-changing website baseline `56f9184b04caf5a816718a8f1318b8fbfbf99d62`.
+- Production source: `takaven/takaven-web` `main`; Vercel Production verified `READY` on 2026-10-14. Behaviour-changing website baseline: `56f9184b04caf5a816718a8f1318b8fbfbf99d62`. Re-read current `main` for the latest documentation-only head.
 - Public routes: `https://www.takaven.com/` redirects with HTTP 307 to `/teamframe/`; `/teamframe/` and `/teamframe/privacy.html` return successfully.
 - Custom domain: Vercel reports `www.takaven.com` verified; authoritative GoDaddy DNS/public resolver verification recorded `www.takaven.com CNAME 10074f97bb5aebf8.vercel-dns-017.com`, with the Vercel ownership TXT record and HTTPS active. The bare apex `takaven.com` is intentionally not attached to this Vercel project and remains outside the TeamFrame marketing deployment.
 - Browser verification: navigation, product-area interaction and the complete seven-question HR Setup Check passed; required images and scripts loaded without page console errors.
