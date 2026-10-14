@@ -1,6 +1,6 @@
 # Website operations and source of truth
 
-**Applies only to TAKAVEN's TeamFrame marketing website**, not the TeamFrame HR application. Last cross-checked against GitHub and Vercel reports: **2026-10-13**. All dates/SHAs and domain statuses below are checkpoints, not permanent facts.
+**Applies only to TAKAVEN's TeamFrame marketing website**, not the TeamFrame HR application. Last cross-checked against GitHub, Vercel deployment records, authoritative/public DNS and the live website: **2026-10-14**. All dates/SHAs and domain statuses below are checkpoints, not permanent facts.
 
 ## Authority / boundaries
 
@@ -12,17 +12,18 @@
 | Website hosting and domain | Verify live Vercel project and GoDaddy DNS; this document records only last-known checkpoints |
 | Website enquiry privacy notice | `teamframe/privacy.html`; check wording against actual hosting/form vendors |
 
-Do not transfer product source, customer records, credentials, or deployment settings here. Do not use the old `takaven/teamframe-site` README as active marketing or pricing authority.
+Do not transfer product source, customer records, credentials, or deployment settings here. The deleted predecessor `takaven/teamframe-site` is historical provenance only; do not recreate it or use its former README as active marketing or pricing authority.
 
 ## Hosting and routes
 
 - Vercel account: `admin@takaven.com`; team: `takaven` (`team_cXj0JaXqYVDGppqmiqNXIxVg`).
 - Vercel project: `takaven-web` (`prj_d0VTmOdVmnB6Di3S99fjPea7V5mz`).
 - Git source: `takaven/takaven-web`, `main`.
-- Folder: `teamframe/` (the marketing repository root has **no** company homepage yet).
-- Preview/checkpoint: `https://takaven-web-gamma.vercel.app/teamframe/` and `/teamframe/privacy.html` reported working 2026-10-13.
-- Intended public routes: `https://www.takaven.com/teamframe/` and `https://www.takaven.com/teamframe/privacy.html`.
-- As of 2026-10-13, apex `takaven.com` was removed from this project, `www.takaven.com` required domain verification, and the old GoDaddy DNS had `CNAME www -> takaven.com`. **No claim is made here that DNS is switched.** Confirm current provider state before writing.
+- Folder: `teamframe/`; `vercel.json` redirects the marketing root `/` to `/teamframe/` with HTTP 307 rather than serving a separate company homepage.
+- Production source checkpoint: `main` commit `56f9184b04caf5a816718a8f1318b8fbfbf99d62`; GitHub/Vercel deployment records report success.
+- Live public routes: `https://www.takaven.com/teamframe/` and `https://www.takaven.com/teamframe/privacy.html`; `https://www.takaven.com/` redirects to `/teamframe/`.
+- Domain checkpoint: authoritative GoDaddy nameservers, Google DNS, Cloudflare DNS and the local resolver returned `www.takaven.com CNAME 10074f97bb5aebf8.vercel-dns-017.com` on 2026-10-13. The `_vercel.takaven.com` ownership TXT record and a valid HTTPS certificate for `www.takaven.com` were present.
+- The apex `takaven.com` remains outside this Vercel project and continued serving its separate GoDaddy-hosted page at the publication check.
 
 **Do not edit:** `app.takaven.com`, `teamframe-production`, the apex DNS, Microsoft 365 MX/SPF/DKIM/DMARC, Resend mail records, or unrelated services as part of a marketing deployment. Changing `www` may replace the existing apex-served/GoDaddy webpage; inspect the actual page and confirm disposition first.
 
@@ -45,3 +46,7 @@ Do not transfer product source, customer records, credentials, or deployment set
 7. Retire a predecessor repository only after its latest content and history are reviewed, current references corrected, and final deletion is explicitly authorised.
 
 When information differs across documents, trust live GitHub/Vercel/provider facts for deployments and the current product commercial authority for claims. Record a dated resolution; do not copy stale wording forward.
+
+## Retired predecessor
+
+The founder confirmed deletion of `takaven/teamframe-site` after the website, application and portfolio source references were reconciled. The review and retained-value record remains in [LEGACY-CONSOLIDATION.md](LEGACY-CONSOLIDATION.md); the deleted repository is not a fallback deployment or source.

@@ -1,6 +1,12 @@
 # Predecessor commercial website review (2026-10-13)
 
-**Read-only predecessor:** [`takaven/teamframe-site`](https://github.com/takaven/teamframe-site), `main`. **Replacement marketing repository:** `takaven/takaven-web`. This record does not authorise deletion of the predecessor or alter the product application's source.
+**Historical predecessor:** `takaven/teamframe-site`, formerly on `main`. **Replacement marketing repository:** `takaven/takaven-web`. The founder deleted the predecessor after the website, application and portfolio source references were reconciled. This record preserves the review outcome and does not alter the product application's source.
+
+## Final outcome (2026-10-14)
+
+- `takaven/takaven-web` is the live canonical marketing source.
+- `https://www.takaven.com/` redirects to the live TeamFrame site at `/teamframe/`; the privacy page and HR Setup Check were verified.
+- `takaven/teamframe-site` was deleted by the founder after the reconciliation gates below were completed.
 
 ## What was inspected
 
@@ -25,12 +31,12 @@ The old website's `README.md`, `index.html`, `site.js`, `styles.css`, `package.j
 - Old reference to `NEXT_PUBLIC_TEAMFRAME_WALKTHROUGH_URL`: applies to the predecessor build, not to the new source. The new site uses the existing mailto fallback plus optional HTTPS `Component.FORM_ENDPOINT`.
 - Old broad `Managed People Ops` terminology, universal compliance guarantees, payroll/WPS operation or unsupported performance-management claims: current TeamFrame product/commercial authority controls.
 
-## Pre-deletion gate
+## Pre-deletion gate (historical, satisfied)
 
-Do **not** delete `takaven/teamframe-site` just because a new Vercel deployment exists. First ensure:
+The deletion decision required more than a new Vercel deployment. Before deletion, the following conditions were satisfied:
 1. new website changes reviewed/merged and public deployment tested;
 2. `takaven/teamframe` and `takaven/product-portfolio/PORTFOLIO.yaml` updated (including generated documents) to name `takaven/takaven-web` canonical;
 3. any operational deployment references still pointing to the predecessor inspected;
-4. owner confirms old repository is no longer needed; preserve any desired history/archive externally before explicit deletion.
+4. owner confirms the old repository is no longer needed and explicitly authorises deletion.
 
 No application database, Vercel product project, Supabase environment or DNS changes are included in this consolidation.
