@@ -20,9 +20,10 @@ Do not transfer product source, customer records, credentials, or deployment set
 - Vercel project: `takaven-web` (`prj_d0VTmOdVmnB6Di3S99fjPea7V5mz`).
 - Git source: `takaven/takaven-web`, `main`.
 - Folder: `teamframe/`; `vercel.json` redirects the marketing root `/` to `/teamframe/` with HTTP 307 rather than serving a separate company homepage.
-- Production source checkpoint: `main` commit `56f9184b04caf5a816718a8f1318b8fbfbf99d62`; GitHub/Vercel deployment records report success.
+- Current Production deployment checkpoint: `main` commit `69b9e16685bf21e66db89d1636f6636ad7952583`, Vercel state `READY` (documentation-only reconciliation). Last behaviour-changing website baseline: `56f9184b04caf5a816718a8f1318b8fbfbf99d62`.
 - Live public routes: `https://www.takaven.com/teamframe/` and `https://www.takaven.com/teamframe/privacy.html`; `https://www.takaven.com/` redirects to `/teamframe/`.
-- Domain checkpoint: authoritative GoDaddy nameservers, Google DNS, Cloudflare DNS and the local resolver returned `www.takaven.com CNAME 10074f97bb5aebf8.vercel-dns-017.com` on 2026-10-13. The `_vercel.takaven.com` ownership TXT record and a valid HTTPS certificate for `www.takaven.com` were present.
+- Domain checkpoint: Vercel reports `www.takaven.com` verified. Authoritative GoDaddy nameservers, Google DNS, Cloudflare DNS and the local resolver returned `www.takaven.com CNAME 10074f97bb5aebf8.vercel-dns-017.com` on 2026-10-13. The `_vercel.takaven.com` ownership TXT record and a valid HTTPS certificate for `www.takaven.com` were present.
+- Apex boundary: `takaven.com` is not attached to `takaven-web`; it remains on the separate GoDaddy apex configuration. An auditor must evaluate the TeamFrame marketing site at `www.takaven.com`, not assume apex and `www` are the same deployment.
 - The apex `takaven.com` remains outside this Vercel project and continued serving its separate GoDaddy-hosted page at the publication check.
 
 **Do not edit:** `app.takaven.com`, `teamframe-production`, the apex DNS, Microsoft 365 MX/SPF/DKIM/DMARC, Resend mail records, or unrelated services as part of a marketing deployment. Changing `www` may replace the existing apex-served/GoDaddy webpage; inspect the actual page and confirm disposition first.

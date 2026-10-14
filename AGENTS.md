@@ -2,7 +2,7 @@
 
 **This repository is the static marketing source only:** `takaven/takaven-web`. Product application: `takaven/teamframe`. The superseded `takaven/teamframe-site` repository was deleted by the founder after source reconciliation; do not recreate or treat it as a source.
 
-Before work: read `README.md`, `docs/WEBSITE-OPERATIONS.md`, `docs/LEGACY-CONSOLIDATION.md` and the current application `TEAMFRAME_MANAGED_PEOPLE_OPS_SCOPE.md`, `TEAMFRAME_ACCESS_MODEL.md`, `docs/operations/CURRENT-STATE.md` and `docs/launch/DECISIONS.md`. Resolve dated status against the relevant live provider before asserting current deployment state.
+Before work: read `README.md`, `docs/AUDIT-HANDOFF.md` for review orientation, `docs/WEBSITE-OPERATIONS.md`, `docs/LEGACY-CONSOLIDATION.md` and the current application `TEAMFRAME_MANAGED_PEOPLE_OPS_SCOPE.md`, `TEAMFRAME_ACCESS_MODEL.md`, `docs/operations/CURRENT-STATE.md` and `docs/launch/DECISIONS.md`. Resolve dated status against the relevant live provider before asserting current deployment state.
 
 - Preserve approved site design, assessment and marketing language unless change is bounded and evidenced.
 - Do not import old prices, support SLAs, payroll processing, customer data or product features simply because an old webpage mentions them.
